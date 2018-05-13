@@ -11,5 +11,6 @@ param_start  - начальный id пользователя
 param_end - конечный id пользователя
 ( без параметров используются значения 0 и 100)
 
-> *./start param_start param_end*
+> ./start param_start param_end
+---
 > ./start 0 1000

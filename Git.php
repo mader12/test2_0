@@ -30,18 +30,15 @@ class Git {
         
         $users = [];
         $to_db_users = [];
+        
         for ($i = $start; $i < $end; $i = $i + self::git_api_count_users) {
-            
             $users = array_merge($users, $this->getUsers($i));
-            
         }
         
         foreach ($users as $u => $v) {
             
             if ($v->id <= $end) {
-                
-                $to_db_users [$v->id] = [$v->id, $v->login];
-                        
+                $to_db_users [$v->id] = [$v->id, $v->login];       
             }
         }
         
